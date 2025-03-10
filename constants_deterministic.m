@@ -1,0 +1,14 @@
+ns = 6;
+OCV = OCVref*(1 + randb(0.5e-3*stochastic,1,n));
+Qnom = Qnom*0.95;
+Q = Qnom*(1 + randb(0.05*stochastic,1,n));
+dQ = max(Q) - Q;
+R0 = R0ref*(Qnom./Q + randb(0.1*stochastic,1,n));
+R1 = R1orig*(Qnom./Q + randb(0.1*stochastic,1,n));
+R2 = R2orig*(Qnom./Q + randb(0.1*stochastic,1,n));
+C1 = C1orig*(1 + randb(0.1*stochastic,1,n));
+C2 = C2orig*(1 + randb(0.1*stochastic,1,n));
+tau1 = R1.*C1;
+tau2 = R2.*C2;
+tau1 = tau1/60;
+tau2 = tau2/60;

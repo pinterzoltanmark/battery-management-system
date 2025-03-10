@@ -1,0 +1,11 @@
+% -------------------------------------------------------------- Variables
+G = optimvar('G',ns,n,'Type','integer','LowerBound',0,'UpperBound',1);
+I = optimvar('I',ns,1,'LowerBound',-200,'UpperBound',200);
+Ieff = optimvar('Ieff',ns,n,'LowerBound',-200,'UpperBound',200);
+v1 = optimvar('v1',ns,n,'LowerBound',-1,'UpperBound',1);
+v1eff = optimvar('v1eff',ns,n,'LowerBound',-1,'UpperBound',1);
+v2 = optimvar('v2',ns,n,'LowerBound',-1,'UpperBound',1);
+v2eff = optimvar('v2eff',ns,n,'LowerBound',-1,'UpperBound',1);
+SoC = optimvar('SoC',ns,n,'LowerBound',0,'UpperBound',100);
+threshold = optimvar('threshold',4,1,'LowerBound',0);
+switchcount = optimvar('switchcount',ns,n);
